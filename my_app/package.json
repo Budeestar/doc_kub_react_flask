@@ -27,7 +27,7 @@
   "rules": {
     "no-unused-vars": ["error", { "varsIgnorePattern": "^use" }]
   }
-}
+},
 
   "browserslist": {
     "production": [
