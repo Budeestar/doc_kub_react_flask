@@ -24,18 +24,6 @@ pipeline {
             }
         }
 
-        stage('Build') {
-            steps {
-                script {
-                    // Build the frontend
-                    dir('my_app') {
-                        bat 'npm run build'
-                    }
-                    // Additional backend build steps if necessary
-                }
-            }
-        }
-
         stage('Start Services') {
             steps {
                 script {
