@@ -14,11 +14,11 @@ pipeline {
                 script {
                     // Install frontend dependencies
                     dir('my_app') {
-                        sh 'start /b npm install'
+                        bat 'start /B npm install'
                     }
                     // Install backend dependencies
                     dir('flaskbackend') {
-                        sh 'pip install -r requirements.txt'
+                        bat 'pip install -r requirements.txt'
                     }
                 }
             }
@@ -29,7 +29,7 @@ pipeline {
                 script {
                     // Build the frontend
                     dir('my_app') {
-                        sh 'npm run build'
+                        bat 'npm run build'
                     }
                     // Additional backend build steps if necessary
                 }
@@ -41,11 +41,11 @@ pipeline {
                 script {
                     // Start Flask backend
                     dir('flaskbackend') {
-                        sh 'python app.py &'
+                        bat 'python app.py &'
                     }
                     // Start React frontend
                     dir('my_app') {
-                        sh 'npm start &'
+                        bat 'npm start &'
                     }
                 }
             }
