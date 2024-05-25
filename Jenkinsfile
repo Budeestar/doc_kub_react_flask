@@ -14,7 +14,7 @@ pipeline {
                 script {
                     // Install frontend dependencies
                     dir('my_app') {
-                        sh 'npm install'
+                        sh 'start /b npm install'
                     }
                     // Install backend dependencies
                     dir('flaskbackend') {
