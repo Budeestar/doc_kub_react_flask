@@ -7,7 +7,7 @@ import json
 from yolo import run_yolo
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=[front-end-deployment-url])
 
 @app.route('/download', methods=['GET'])
 def download_file():
