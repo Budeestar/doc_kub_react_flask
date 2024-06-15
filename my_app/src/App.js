@@ -35,7 +35,7 @@ function App(){
     formData.append('file', image);
 
     try {
-      const response = await axios.post('http://localhost:5000/predict', formData, {
+      const response = await axios.post('[AWS-URL_AFTER-HOSTING]/predict', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
